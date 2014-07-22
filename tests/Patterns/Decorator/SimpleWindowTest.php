@@ -10,7 +10,8 @@ class SimpleWindowTest extends PHPUnit_Framework_TestCase
     {
         $simpleWindow = new SimpleWindow();
         $rs = $simpleWindow->render();
-        
+
+        $this->assertInstanceOf('Digitec\Patterns\Decorator\Window', $simpleWindow);
         $this->assertFalse(empty($rs));
     }
 }

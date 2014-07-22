@@ -11,12 +11,15 @@ class TitledWindow extends DecoratedWindow
         return $string . parent::render();
     }
     
-    private function addTitle()
+    protected function addTitle()
     {
         $returnString = <<<EOL
 +-------------+
 |Title        |
 EOL;
+        /*
+         * This deliberately echoes the value instead of returning it, so the unit test fails.
+         */
         echo $returnString . PHP_EOL;
     }
 }
