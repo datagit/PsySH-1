@@ -7,7 +7,7 @@ class SimpleWindow implements Window
 {
     public function render()
     {
-        echo <<<EOL
+        $returnString = <<<EOL
 +-------------+
 |             |
 |             |
@@ -16,6 +16,6 @@ class SimpleWindow implements Window
 |             |
 +-------------+
 EOL;
-        echo PHP_EOL;
+        return $returnString . PHP_EOL;
     }
 }

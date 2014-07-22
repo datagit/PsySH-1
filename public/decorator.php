@@ -12,18 +12,18 @@ echo PHP_EOL . 'Simple Window' . PHP_EOL;
 
 $window = new SimpleWindow();
 
-$window->render();
+echo $window->render();
 
 echo PHP_EOL . 'Decorated Simple Window' . PHP_EOL;
 
 $decoratedWindow = new DecoratedWindow($window);
 
-$decoratedWindow->render();
+echo $decoratedWindow->render();
 
 echo PHP_EOL . 'Titled Simple Window' . PHP_EOL;
 
 $titledWindow = new TitledWindow($window);
 
-$titledWindow->render();
+echo $titledWindow->render();
 
 Shell::debug(get_defined_vars());

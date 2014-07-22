@@ -7,16 +7,16 @@ class TitledWindow extends DecoratedWindow
 {
     public function render()
     {
-        $this->addTitle();
-        parent::render();
+        $string = $this->addTitle();
+        return $string . parent::render();
     }
     
     private function addTitle()
     {
-        echo <<<EOL
+        $returnString = <<<EOL
 +-------------+
 |Title        |
 EOL;
-        echo PHP_EOL;
+        echo $returnString . PHP_EOL;
     }
 }

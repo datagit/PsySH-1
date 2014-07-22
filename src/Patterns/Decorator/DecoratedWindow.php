@@ -20,7 +20,7 @@ class DecoratedWindow implements Window
      */
     public function render()
     {
-        $this->getWindowReference()->render();
+        return $this->getWindowReference()->render();
     }
     
     /*
