@@ -1,0 +1,15 @@
+{
+    "name": "technomike/psysh",
+    "authors": [
+        {
+            "name": "Miguel Ibarra",
+            "email": "miguel@digitec.ws"
+        }
+    ],
+    "require": {
+        "psy/psysh": "~0.1"
+    },
+    "autoload": {
+        "psr-4": {"Digitec\\": "src/"}
+    }
+}
