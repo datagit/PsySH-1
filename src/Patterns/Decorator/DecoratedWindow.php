@@ -5,15 +5,37 @@ use Digitec\Patterns\Decorator\Window;
 
 class DecoratedWindow implements Window
 {
-    private $windowReference;
+    /*
+     * @var Window
+     */
+    protected $windowReference;
     
     public function __construct(Window $windowReference)
     {
-        $this->windowReference = $windowReference;
+        $this->setWindowReference($windowReference);
     }
     
+    /**
+     *  Renders the window
+     */
     public function render()
     {
-        $this->windowReference->render();
+        $this->getWindowReference()->render();
+    }
+    
+    /*
+     * @return Window
+     */
+    public function getWindowReference()
+    {
+        return $this->windowReference;
+    }
+    
+    /*
+     * @param Window $windowReference
+     */
+    public function setWindowReference(Window $windowReference)
+    {
+        $this->windowReference = $windowReference;
     }
 }
